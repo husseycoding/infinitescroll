@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <infinitescroll_init>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/infinitescroll.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/infinitescroll.css</name>
+            </action>
+            <block type="core/text" name="fragment_meta" before="-">
+                <action method="setText">
+                    <text>
+<![CDATA[<meta name="fragment" content="!">]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+        <reference name="content">
+            <block type="infinitescroll/init" name="infinitescroll_init" template="infinitescroll/init.phtml" />
+        </reference>
+    </infinitescroll_init>
+    <catalog_category_default>
+        <update handle="infinitescroll_init" />
+    </catalog_category_default>
+    <catalog_category_layered>
+        <update handle="infinitescroll_init" />
+    </catalog_category_layered>
+    <catalogsearch_result_index>
+        <update handle="infinitescroll_init" />
+    </catalogsearch_result_index>
+    <catalogsearch_advanced_result>
+        <update handle="infinitescroll_init" />
+    </catalogsearch_advanced_result>
+    <infinitescroll_all>
+        <reference name="product_list_toolbar">
+            <action method="addPagerLimit" translate="label"><mode>list</mode><limit>all</limit><label>All</label></action>
+            <action method="addPagerLimit" translate="label"><mode>grid</mode><limit>all</limit><label>All</label></action>
+            <action method="setDefaultListPerPage"><limit>all</limit></action>
+            <action method="setDefaultGridPerPage"><limit>all</limit></action>
+        </reference>
+    </infinitescroll_all>
+</layout>

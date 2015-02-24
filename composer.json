@@ -1,0 +1,17 @@
+{
+    "name":"husseycoding/infinitescroll",
+    "type":"magento-module",
+    "license":"OSL-3.0",
+    "homepage":"https://github.com/husseycoding/infinitescroll",
+    "description":"Magento extension adding SEO friendly infinite scroll functionality to category pages.",
+    "authors":[
+        {
+            "name":"Jonathan Hussey",
+            "email":"hussey@husseycoding.co.uk"
+        }
+    ],
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}
+

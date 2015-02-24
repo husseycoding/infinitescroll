@@ -1,0 +1,11 @@
+<?php if ($this->isActive()): ?>
+    <script type="text/javascript">
+        //<![CDATA[
+            var thisinfinitescroll = new infinitescroll();
+            thisinfinitescroll.shouldload = <?php echo $this->shouldLoad() ? 'true' : 'false'; ?>;
+            thisinfinitescroll.nextpage = 2;
+            thisinfinitescroll.lastpage = <?php echo $this->getLastPage(); ?>;
+            thisinfinitescroll.mode = "<?php echo $this->getMode(); ?>";
+        //]]>
+    </script>
+<?php endif; ?>
