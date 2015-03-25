@@ -41,6 +41,7 @@ var infinitescroll = Class.create({
                 url += "?p=" + this.nextpage;
             }
             new Ajax.Request(url, {
+                method:'get',
                 onSuccess: function(response) {
                     this.nextpage++;
                     $("infinitescroll-loading").remove();
